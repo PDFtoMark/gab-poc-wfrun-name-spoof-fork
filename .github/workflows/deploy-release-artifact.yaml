@@ -1,10 +1,10 @@
 name: Deploy Release Artifact
 on:
-  workflow_dispatch: {}
+  pull_request:
 permissions:
   contents: read
 jobs:
   noop:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "real upstream, dispatch-only"
+      - run: echo "attacker fork PR run reusing the watched workflow name"
